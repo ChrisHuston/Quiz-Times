@@ -1,0 +1,7 @@
+<div class="form-inline" style="margin-top: 10px; margin-bottom: 10px;" ng-show="user.quizzes.length>0">
+    <md-select ng-model="user.selectedQuiz" style="min-width: 200px;" ng-change="getQuizSubmissions()">
+        <md-select-label>{{ q ? q.title : '-- Select Quiz --' }}</md-select-label>
+        <md-option ng-value="q" ng-repeat="q in user.quizzes">{{q.title}}</md-option>
+    </md-select>
+</div>
+<div ui-grid="gridOptions" class="kGrid" ui-grid-selection ui-grid-exporter></div>
